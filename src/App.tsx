@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+import { createAlphabet } from './data';
 
 function App(): JSX.Element {
   const [passLen, setPassLen] = useState(8);
@@ -9,6 +10,8 @@ function App(): JSX.Element {
   const [inclLowercase, setLowerCase] = useState(true);
   const [inclNumbers, setNumbers] = useState(true);
   const [inclSymbols, setSymbols] = useState(false);
+
+  createAlphabet();
 
   return (
     <div className="card">

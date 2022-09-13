@@ -21,7 +21,12 @@ Users should be able to:
   - dynamically update strength meter
 - refresh button to generate new password with existing parameters
 
-### Deliverables
+### Generating password
 
-- Hook up state to input controls
--
+- seperate data files with valid characters for each option (Uppercase letters, lowercase letters, Numbers, Symbols)
+- have each object assigned an id number (1-4), or use a switch statement
+- for each character for the password length:
+  - generate a random number, and choose an option based on obj id number
+  - generate a random number for the length of the object's data
+  - add the character to the password string
+- update the password every time an option is changed, including character length
