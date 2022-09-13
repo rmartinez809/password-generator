@@ -15,15 +15,20 @@ body {
 }
 
 .card {
-  border: 0.25rem solid black;
+  border: 0.07rem solid black;
   padding: 1rem;
 }
 
 .password {
-  border: 0.25rem solid red;
+  border: 0.05rem solid red;
   padding: 0.5rem;
 }
 
 input {
   display: block;
+}
+
+button {
+  padding: 1rem;
+  text-align: center;
 }

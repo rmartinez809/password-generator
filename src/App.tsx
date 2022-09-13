@@ -1,13 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
 function App(): JSX.Element {
+  const [passLen, setPassLen] = useState(8);
+
   return (
     <div className="card">
       <input className="password" type="text" placeholder='P4$5W0rD!'></input>
 
-      <p>Character Length</p>
-      <input id="slider" className="slider" type="range" min="0" max="99"></input>
+      <p>Character Length {passLen}</p>
+      <input id="slider" className="slider" type="range" min="0" max="99" value={passLen}
+      onChange={(event) => {
+        setPassLen(Number(event.target.value));
+      }
+      }></input>
 
       <label className="checkbox-label">Include Uppercase Letters</label>
       <input id="upper-case" type="checkbox" defaultChecked={true}></input>
