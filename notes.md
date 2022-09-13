@@ -10,7 +10,7 @@ Users should be able to:
 - View the optimal layout for the interface depending on screen size
 - See hover and focus states for all interactive elements on the page
 
-### Misc
+### Outline
 
 - card component to house password generator
 - section to display password
@@ -20,3 +20,7 @@ Users should be able to:
 - section to display password strength
   - dynamically update strength meter
 - refresh button to generate new password with existing parameters
+
+### Deliverables
+
+- Hook up state to input controls
