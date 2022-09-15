@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Generating password
 
-- seperate data files with valid characters for each option (Uppercase letters, lowercase letters, Numbers, Symbols)
-- have each object assigned an id number (1-4), or use a switch statement
+- seperate data file with valid characters for each option (Uppercase letters, lowercase letters, Numbers, Symbols)
+- switch statement to select case
 - for each character for the password length:
   - generate a random number, and choose an option based on obj id number
   - generate a random number for the length of the object's data

@@ -1,8 +1,11 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
-import { createAlphabet } from './data';
+import { characters } from './data';
 
 function App(): JSX.Element {
+
+  characters()
+
   const [passLen, setPassLen] = useState(8);
 
   //state for password options
@@ -11,7 +14,7 @@ function App(): JSX.Element {
   const [inclNumbers, setNumbers] = useState(true);
   const [inclSymbols, setSymbols] = useState(false);
 
-  createAlphabet();
+
 
   return (
     <div className="card">
