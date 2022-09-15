@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import { characters } from './data';
+import { characters, generatePassword } from './data';
 
 function App(): JSX.Element {
-
-  characters()
 
   const [passLen, setPassLen] = useState(8);
 
@@ -14,6 +12,7 @@ function App(): JSX.Element {
   const [inclNumbers, setNumbers] = useState(true);
   const [inclSymbols, setSymbols] = useState(false);
 
+  generatePassword(passLen);
 
 
   return (
