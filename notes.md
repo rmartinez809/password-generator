@@ -31,6 +31,12 @@ Users should be able to:
   - add the character to the password string
 - update the password every time an option is changed, including character length
 
+### Process
+
+- Automatically generate a random password when the component mounts (only once)
+- Fill the value of the password input field with the randomly generated password
+- Whenever the state of an option changes, generate a new password
+
 ### Extras
 
 - Does haveibeenpwned.com have an api? It would be cool if the password generator

@@ -1,10 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import './App.css';
-import { characters, generatePassword } from './data';
+import { generatePassword } from './data';
 
 function App(): JSX.Element {
 
   const [passLen, setPassLen] = useState(8);
+  const [password, setPassword] = useState('');
 
   //state for password options
   const [inclUppercase, setUpperCase] = useState(true);
@@ -12,17 +13,34 @@ function App(): JSX.Element {
   const [inclNumbers, setNumbers] = useState(true);
   const [inclSymbols, setSymbols] = useState(false);
 
-  generatePassword(passLen);
+  //when page loads, initially generate a random password
+  /**As of React 18, components will need to be able to mount and remount
+   * which runs useEffect twice. Utilizing useRef to make sure this logic
+   * only runs once
+   */
+  const createFirstPass = useRef(true);
+  useEffect(() => {
+    if(createFirstPass.current) {
+      createFirstPass.current = false;
+      setPassword(generatePassword(passLen));
+    }
+  }, [])
 
 
   return (
     <div className="card">
-      <input className="password" type="text" placeholder='P4$5W0rD!'></input>
+      <input className="password" type="text" placeholder='P4$5W0rD!' value={password || ''}
+      onChange = {(event) => {
+        setPassword(String(event.target.value));
+      }}
+      ></input>
 
       <p>Character Length {passLen}</p>
       <input id="slider" className="slider" type="range" min="0" max="99" value={passLen}
       onChange = {(event) => {
-        setPassLen(Number(event.target.value));
+        const value = Number(event.target.value);
+        setPassLen(value);
+        setPassword(generatePassword(value));
       }
       }></input>
 
