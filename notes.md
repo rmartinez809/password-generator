@@ -30,3 +30,9 @@ Users should be able to:
   - generate a random number for the length of the object's data
   - add the character to the password string
 - update the password every time an option is changed, including character length
+
+### Extras
+
+- Does haveibeenpwned.com have an api? It would be cool if the password generator
+  threw a warning for previously compromised passwords
+  - https://haveibeenpwned.com/API/v3

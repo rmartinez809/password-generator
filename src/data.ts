@@ -13,33 +13,39 @@ export const characters = () => {
     console.log(symbols);
 }
 
+//generate a random number for the length of the appropriate array
+//select value at array[randIndex]
+//add value to string
 export const generatePassword = (maxLength): string => {
     let password = '';
+    let randIndex: number;
 
     while (password.length < maxLength) {
+        //Will need to replace this statement for the possible cases (password options)
         const randomCharset: number = randomNumber(4);
 
         switch (randomCharset) {
             case 0:
-                console.log(`selecting an upper case letter...`);
-                password = password + 'a';
+                randIndex = randomNumber(alphabetUpperCase.length);
+                password = password + alphabetUpperCase[randIndex];
                 break;
             case 1:
-                console.log(`selecting a lower case letter...`);
-                password = password + 'a';
+                randIndex = randomNumber(alphabetLowerCase.length);
+                password = password + alphabetLowerCase[randIndex];
                 break;
             case 2:
-                console.log(`selecting a number...`);
-                password = password + 'a';
+                randIndex = randomNumber(numbers.length);
+                password = password + numbers[randIndex].toString();
                 break;
             case 3:
                 console.log(`selecting a symbol...`);
-                password = password + 'a';
+                randIndex = randomNumber(symbols.length);
+                password = password + symbols[randIndex];
                 break;
         }
     }
 
-
+    console.log(`Password is ${password}`);
     return password;
 }
 
