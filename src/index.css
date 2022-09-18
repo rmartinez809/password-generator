@@ -20,8 +20,21 @@ body {
 }
 
 .password {
-  border: 0.05rem solid red;
+  /* border: 0.05rem solid red; */
+  border: none;
   padding: 0.5rem;
+  background-image: url("copy-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: 98% 50%;
+}
+
+.password:hover {
+  cursor: pointer;
+}
+
+.password:focus {
+  outline: none;
 }
 
 input {

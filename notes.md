@@ -39,6 +39,4 @@ Users should be able to:
 
 ### Extras
 
-- Does haveibeenpwned.com have an api? It would be cool if the password generator
-  threw a warning for previously compromised passwords
-  - https://haveibeenpwned.com/API/v3
+- Add tooltip to indicate when value has been copied to clipboard.
