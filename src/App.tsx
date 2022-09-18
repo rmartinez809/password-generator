@@ -58,9 +58,18 @@ function App(): JSX.Element {
 
       onClick = {(event) => {
         navigator.clipboard.writeText(password);
+        const popUp = document.getElementById("tooltip");
+        popUp.style.display="inline";
+
+        setTimeout( () => {
+          popUp.style.display = "none";
+        }, 1500);
       }}
       >
       </input>
+      <div className='tooltip-container'>
+        <span id="tooltip">✔ Copied!</span>
+      </div>
 
       <p>Character Length {passLen}</p>
       <input id="slider" className="slider" type="range" min="0" max="99" value={passLen}
