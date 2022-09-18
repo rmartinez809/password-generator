@@ -10,7 +10,7 @@ Users should be able to:
 - View the optimal layout for the interface depending on screen size
 - See hover and focus states for all interactive elements on the page
 
-### Misc
+### Outline
 
 - card component to house password generator
 - section to display password
@@ -20,3 +20,25 @@ Users should be able to:
 - section to display password strength
   - dynamically update strength meter
 - refresh button to generate new password with existing parameters
+
+### Generating password
+
+- seperate data file with valid characters for each option (Uppercase letters, lowercase letters, Numbers, Symbols)
+- switch statement to select case
+- for each character for the password length:
+  - generate a random number, and choose an option based on obj id number
+  - generate a random number for the length of the object's data
+  - add the character to the password string
+- update the password every time an option is changed, including character length
+
+### Process
+
+- Automatically generate a random password when the component mounts (only once)
+- Fill the value of the password input field with the randomly generated password
+- Whenever the state of an option changes, generate a new password
+
+### Extras
+
+- Does haveibeenpwned.com have an api? It would be cool if the password generator
+  threw a warning for previously compromised passwords
+  - https://haveibeenpwned.com/API/v3
