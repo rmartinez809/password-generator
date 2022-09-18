@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState, useRef, Fragment} from 'react';
 import './App.css';
 import { generatePassword } from './data';
 import refresh from './refresh-svgrepo-com.svg';
@@ -50,11 +50,26 @@ function App(): JSX.Element {
 
   return (
     <div className="card">
-      <input className="password" type="text" placeholder='P4$5W0rD!' value={password || ''}
+
+      <input className="password" type="text" placeholder='P4$5W0rD!' value={password || ''} readOnly title="Copy to clipboard"
       onChange = {(event) => {
         setPassword(String(event.target.value));
       }}
-      ></input>
+
+      onClick = {(event) => {
+        navigator.clipboard.writeText(password);
+        const popUp = document.getElementById("tooltip");
+        popUp.style.display="inline";
+
+        setTimeout( () => {
+          popUp.style.display = "none";
+        }, 1500);
+      }}
+      >
+      </input>
+      <div className='tooltip-container'>
+        <span id="tooltip">✔ Copied!</span>
+      </div>
 
       <p>Character Length {passLen}</p>
       <input id="slider" className="slider" type="range" min="0" max="99" value={passLen}
