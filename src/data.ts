@@ -9,35 +9,36 @@ const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '+', '=', '<'
 //generate a random number for the length of the appropriate array
 //select value at array[randIndex]
 //add value to string
-export const generatePassword = (maxLength): string => {
+export const generatePassword = (maxLength, options:string[]): string => {
     let password = '';
     let randIndex: number;
 
+    console.log(`password options: ${options}`);
+
     while (password.length < maxLength) {
         //Will need to replace this statement for the possible cases (password options)
-        const randomCharset: number = randomNumber(4);
+        const randomCharset: number = randomNumber(options.length);
 
-        switch (randomCharset) {
-            case 0:
+        switch (options[randomCharset]) {
+            case "upper-case":
                 randIndex = randomNumber(alphabetUpperCase.length);
                 password = password + alphabetUpperCase[randIndex];
                 break;
-            case 1:
+            case "lower-case":
                 randIndex = randomNumber(alphabetLowerCase.length);
                 password = password + alphabetLowerCase[randIndex];
                 break;
-            case 2:
+            case "numbers":
                 randIndex = randomNumber(numbers.length);
                 password = password + numbers[randIndex].toString();
                 break;
-            case 3:
+            case "symbols":
                 randIndex = randomNumber(symbols.length);
                 password = password + symbols[randIndex];
                 break;
         }
     }
 
-    console.log(`Password is ${password}`);
     return password;
 }
 
