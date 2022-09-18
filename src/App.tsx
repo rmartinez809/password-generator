@@ -1,6 +1,7 @@
 import React, {useEffect, useState, useRef} from 'react';
 import './App.css';
 import { generatePassword } from './data';
+import refresh from './refresh-svgrepo-com.svg';
 
 function App(): JSX.Element {
 
@@ -13,11 +14,6 @@ function App(): JSX.Element {
   const [inclNumbers, setNumbers] = useState(true);
   const [inclSymbols, setSymbols] = useState(false);
 
-  /**How to handle option changes
-   * If an option is set to true, add it to an array
-   * When calling the generatePassword() function, pass in this array as an argument
-   * Generate a random number for the length of the options array
-   */
   const passwordOptions = useRef(["upper-case", "lower-case", "numbers"]);
 
   //when page loads, initially generate a random password
@@ -37,6 +33,9 @@ function App(): JSX.Element {
    * Helper function
    * Checks if password option is currently in the options array
    * If it is remove it, otherwise add the option
+   *
+   * When calling the generatePassword() function, pass in this array as an argument
+   * Generate a random number for the length of the options array
    */
   const handlePasswordOptions = (option:string) => {
     if (passwordOptions.current.includes(option)) {
@@ -63,7 +62,6 @@ function App(): JSX.Element {
         const value = Number(event.target.value);
         setPassLen(value);
         setPassword(generatePassword(value, passwordOptions.current));
-        console.log(`Password options in React ${passwordOptions.current}`);
       }
       }></input>
 
@@ -105,7 +103,14 @@ function App(): JSX.Element {
 
       <p>[password strength]</p>
 
-      <button>new password</button>
+      <div className='btn-container'
+        onClick={() => {
+          setPassword(generatePassword(passLen, passwordOptions.current));
+        }}
+      >
+        <img src={refresh} className="refresh-btn"></img>
+      </div>
+
     </div>
   );
 }

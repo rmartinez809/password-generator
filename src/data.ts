@@ -13,8 +13,6 @@ export const generatePassword = (maxLength, options:string[]): string => {
     let password = '';
     let randIndex: number;
 
-    console.log(`password options: ${options}`);
-
     while (password.length < maxLength) {
         //Will need to replace this statement for the possible cases (password options)
         const randomCharset: number = randomNumber(options.length);
