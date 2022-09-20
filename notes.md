@@ -37,6 +37,15 @@ Users should be able to:
 - Fill the value of the password input field with the randomly generated password
 - Whenever the state of an option changes, generate a new password
 
+### Password Strength
+
+- Length:
+  - None: 0-1
+  - Weak: 2-5
+  - Fair: 6-8
+  - Good: 9-11
+  - Excellent: 12+
+
 ### Extras
 
-- Add tooltip to indicate when value has been copied to clipboard.
+-[X] Add tooltip to indicate when value has been copied to clipboard.

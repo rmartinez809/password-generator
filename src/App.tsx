@@ -1,6 +1,7 @@
 import React, {useEffect, useState, useRef, Fragment} from 'react';
 import './App.css';
 import { generatePassword } from './data';
+import PassStrength from './PassStrength';
 import refresh from './refresh-svgrepo-com.svg';
 
 function App(): JSX.Element {
@@ -71,7 +72,9 @@ function App(): JSX.Element {
         <span id="tooltip">✔ Copied!</span>
       </div>
 
-      <p>Character Length {passLen}</p>
+      <PassStrength password={password}/>
+
+      <p>Password Length {passLen}</p>
       <input id="slider" className="slider" type="range" min="0" max="99" value={passLen}
       onChange = {(event) => {
         const value = Number(event.target.value);
@@ -115,8 +118,6 @@ function App(): JSX.Element {
         setPassword(generatePassword(passLen, passwordOptions.current));
       }}
       ></input>
-
-      <p>[password strength]</p>
 
       <div className='btn-container'
         onClick={() => {
