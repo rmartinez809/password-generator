@@ -36,7 +36,17 @@ Users should be able to:
 - Automatically generate a random password when the component mounts (only once)
 - Fill the value of the password input field with the randomly generated password
 - Whenever the state of an option changes, generate a new password
+- Refactor code, and clean up CSS
+
+### Password Strength
+
+- Length:
+  - None: 0-1
+  - Weak: 2-5 (red)
+  - Fair: 6-8 (yellow)
+  - Good: 9-11 (light green)
+  - Excellent: 12+ (green)
 
 ### Extras
 
-- Add tooltip to indicate when value has been copied to clipboard.
+-[X] Add tooltip to indicate when value has been copied to clipboard.

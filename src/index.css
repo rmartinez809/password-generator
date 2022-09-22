@@ -47,11 +47,48 @@ body {
   margin-left: 7%;
 }
 
+.progress-bar-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bar {
+  width: 24%;
+  height: 0.25rem;
+  border: 0.05rem solid lightgrey;
+  border-radius: 1rem;
+}
+
+.red {
+  border: 0.05rem solid red;
+  background-color: red;
+}
+
+.yellow {
+  border: 0.05rem solid gold;
+  background-color: gold;
+}
+
+.green {
+  border: 0.05rem solid mediumseagreen;
+  background-color: mediumseagreen;
+}
+
+.dark-green {
+  border: 0.05rem solid green;
+  background-color: green;
+}
+
 input {
   display: block;
 }
 
+p {
+  margin-top: 1rem;
+}
+
 .btn-container {
+  margin-top: 1rem;;
   background-color: lightgray;
   text-align: center;
   padding: 0.5rem;
@@ -63,5 +100,5 @@ input {
 }
 
 .refresh-btn {
-  width: 1.5rem;
+  width: 1.25rem;
 }
