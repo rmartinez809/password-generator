@@ -1,3 +1,11 @@
+:root {
+  --red: red;
+  --yellow: gold;
+  --lightgreen: mediumseagreen;
+  --green: green;
+  --bar-outline: 0.05rem
+}
+
 /* Reset browser defaults */
 * {
   border: 0;
@@ -55,28 +63,28 @@ body {
 .bar {
   width: 24%;
   height: 0.25rem;
-  border: 0.05rem solid lightgrey;
+  border: var(--bar-outline) solid lightgrey;
   border-radius: 1rem;
 }
 
 .red {
-  border: 0.05rem solid red;
-  background-color: red;
+  border: var(--bar-outline) solid var(--red);
+  background-color: var(--red);
 }
 
 .yellow {
-  border: 0.05rem solid gold;
-  background-color: gold;
+  border: var(--bar-outline) solid var(--yellow);
+  background-color: var(--yellow);
 }
 
 .green {
-  border: 0.05rem solid mediumseagreen;
-  background-color: mediumseagreen;
+  border: var(--bar-outline) solid var(--lightgreen);
+  background-color: var(--lightgreen);
 }
 
 .dark-green {
-  border: 0.05rem solid green;
-  background-color: green;
+  border: var(--bar-outline) solid var(--green);
+  background-color: var(--green);
 }
 
 input {
