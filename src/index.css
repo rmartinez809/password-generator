@@ -59,6 +59,26 @@ body {
   border-radius: 1rem;
 }
 
+.red {
+  border: 0.05rem solid red;
+  background-color: red;
+}
+
+.yellow {
+  border: 0.05rem solid gold;
+  background-color: gold;
+}
+
+.green {
+  border: 0.05rem solid mediumseagreen;
+  background-color: mediumseagreen;
+}
+
+.dark-green {
+  border: 0.05rem solid green;
+  background-color: green;
+}
+
 input {
   display: block;
 }
