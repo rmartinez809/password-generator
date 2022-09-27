@@ -156,7 +156,7 @@ input[type="checkbox"] {
 }
 
 .btn-container {
-  margin-top: 1rem;;
+  margin-top: 1.5rem;
   border: 0.05rem solid var(--primary-text);
   text-align: center;
   padding: 0.5rem;
