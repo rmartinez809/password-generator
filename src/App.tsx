@@ -6,7 +6,7 @@ import refresh from './refresh-svgrepo-com.svg';
 
 function App(): JSX.Element {
 
-  const [passLen, setPassLen] = useState(8);
+  const [passLen, setPassLen] = useState(12);
   const [password, setPassword] = useState('');
 
   //state for password options
@@ -50,7 +50,7 @@ function App(): JSX.Element {
 
 
   return (
-    <div className="card">
+    <div className="card border-radius">
 
       <input className="password" type="text" placeholder='P4$5W0rD!' value={password || ''} readOnly title="Copy to clipboard"
       onChange = {(event) => {
@@ -74,7 +74,7 @@ function App(): JSX.Element {
 
       <PassStrength password={password}/>
 
-      <p>Password Length {passLen}</p>
+      <p className='password-length'>Password Length {passLen}</p>
       <input id="slider" className="slider" type="range" min="0" max="99" value={passLen}
       onChange = {(event) => {
         const value = Number(event.target.value);
@@ -124,7 +124,7 @@ function App(): JSX.Element {
           setPassword(generatePassword(passLen, passwordOptions.current));
         }}
       >
-        <img src={refresh} className="refresh-btn"></img>
+        <img src={refresh} className="refresh-icon"></img>
       </div>
 
     </div>

@@ -4,16 +4,16 @@ function PassStrength({password}): JSX.Element {
     const passLen = password.length;
     let strength: string;
 
-    if (passLen >= 2 && passLen <= 5) {
+    if (passLen >= 2 && passLen <= 6) {
         strength = "weak";
     }
-    else if (passLen >= 6 && passLen <= 8) {
+    else if (passLen >= 7 && passLen <= 9) {
         strength = "fair";
     }
-    else if (passLen >= 9 && passLen <= 11) {
+    else if (passLen >= 10 && passLen <= 12) {
         strength = "good";
     }
-    else if (passLen >= 12) {
+    else if (passLen >= 13) {
         strength = "excellent";
     }
     else {
@@ -24,15 +24,15 @@ function PassStrength({password}): JSX.Element {
         <div className={`bar ${strength === "weak" ? "red" : ""}
             ${strength === "fair" ? "yellow" : ""}
             ${strength === "good" ? "green" : ""}
-            ${strength === "excellent" ? "dark-green" : ""}
+            ${strength === "excellent" ? "green" : ""}
             `}></div>
         <div className={`bar ${strength === "fair" ? "yellow" : ""}
             ${strength === "good" ? "green" : ""}
-            ${strength === "excellent" ? "dark-green" : ""}
+            ${strength === "excellent" ? "green" : ""}
         `}></div>
         <div className={`bar ${strength === "good" ? "green" : ""}
-            ${strength === "excellent" ? "dark-green" : ""}`}></div>
-        <div className={`bar ${strength === "excellent" ? "dark-green" : ""}`}></div>
+            ${strength === "excellent" ? "green" : ""}`}></div>
+        <div className={`bar ${strength === "excellent" ? "green" : ""}`}></div>
       </div>
     )
 }
