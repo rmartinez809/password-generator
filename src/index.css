@@ -37,7 +37,7 @@ body {
 .card {
   padding: 2rem;
   background-color: var(--background-card);
-  font-size: 0.9rem;
+  font-size: 1rem;
   box-shadow: var(--shadow-elevation-medium);
   min-height: fit-content;
   max-height: fit-content;
@@ -55,7 +55,7 @@ body {
   background-color: var(--background-card);
   color: var(--primary-text);
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .password:hover {
