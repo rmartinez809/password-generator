@@ -38,6 +38,12 @@ Users should be able to:
 - Whenever the state of an option changes, generate a new password
 - Refactor code, and clean up CSS
 
+### Design
+
+- inspiration: (Log Pass) https://www.behance.net/gallery/143075891/Logpass-Mobile-app?tracking_source=curated_galleries_list
+  - https://color.adobe.com/trends/Ui/ux
+- Add shadow to widget
+
 ### Password Strength
 
 - Length:
