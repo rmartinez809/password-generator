@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef, Fragment} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import './App.css';
 import { generatePassword } from './data';
 import PassStrength from './PassStrength';
