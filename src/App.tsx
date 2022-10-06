@@ -18,17 +18,9 @@ function App(): JSX.Element {
   const passwordOptions = useRef(["upper-case", "lower-case", "numbers"]);
 
   //when page loads, initially generate a random password
-  /**As of React 18, components will need to be able to mount and remount
-   * which runs useEffect twice. Utilizing useRef to make sure this logic
-   * only runs once
-   */
-  const createFirstPass = useRef(true);
-  useEffect(() => {
-    if(createFirstPass.current) {
-      createFirstPass.current = false;
-      setPassword(generatePassword(passLen, passwordOptions.current));
-    }
-  }, [])
+useEffect(() => {
+  setPassword(generatePassword(passLen, passwordOptions.current))
+}, [])
 
   /**
    * Helper function
