@@ -75,7 +75,7 @@ useEffect(() => {
       }
       }></input>
 
-      <label className="checkbox-label">Include Uppercase Letters</label>
+      <label className="checkbox-label" htmlFor='upper-case'>Include Uppercase Letters</label>
       <input id="upper-case" type="checkbox" defaultChecked={true}
       onChange = {(event) => {
         setUpperCase(event.target.checked);
@@ -84,7 +84,7 @@ useEffect(() => {
       }}
       ></input>
 
-      <label className="checkbox-label">Include Lowercase Letters</label>
+      <label className="checkbox-label" htmlFor='lower-case'>Include Lowercase Letters</label>
       <input id="lower-case" type="checkbox" defaultChecked={true}
       onChange = {(event) => {
         setLowerCase(event.target.checked);
@@ -93,7 +93,7 @@ useEffect(() => {
       }}
       ></input>
 
-      <label className="checkbox-label">Include Numbers</label>
+      <label className="checkbox-label" htmlFor='numbers'>Include Numbers</label>
       <input id="numbers" type="checkbox" defaultChecked={true}
       onChange = {(event) => {
         setNumbers(event.target.checked);
@@ -102,7 +102,7 @@ useEffect(() => {
       }}
       ></input>
 
-      <label className="checkbox-label">Include Symbols</label>
+      <label className="checkbox-label" htmlFor='symbols'>Include Symbols</label>
       <input id="symbols" type="checkbox" defaultChecked={false}
       onChange = {(event) => {
         setSymbols(event.target.checked);
